@@ -1,22 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
-
-//AAA Pattern
-
-// [Arrange]
-// [Act]
-// [Assert]
-
-const password = process.env.PASSWORD;
-
-test.beforeAll(async ({ playwright }) => {
-    test.skip(
-      !!process.env.PROD,
-      'Test intentionally skipped in production due to data dependency.'
-    );
-    // start a server
-    // create a db connection
-    // reuse a sign in state
-});
+import HomePage from '../pages/home-page';
+const URL:string="https://playwright.dev/"
   
 test.beforeEach(async ({ page }, testInfo) => {
     console.log(`Running ${testInfo.title}`);
