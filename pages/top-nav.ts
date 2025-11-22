@@ -17,9 +17,11 @@ export class TopMenuPage {
         this.javaLink = page.getByRole('navigation', { name: 'Main' }).getByText('Java');
         this.nodeLabel = page.getByText(this.nodeDescription, {exact:true});
         this.javaLabel = page.getByText(this.javaDescription);
+
     }
 
     async hoverNode() {
+        
         await this.nodeLink.hover();
     }
     
